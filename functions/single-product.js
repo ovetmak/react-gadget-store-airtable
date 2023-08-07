@@ -19,11 +19,9 @@ exports.handler = async (event, context, cb) => {
         }
       }
       product = { id: product._rawJson.id, ...product._rawJson.fields }
-      // console.log(product)
-      console.log(product)
+
       return {
         statusCode: 200,
-        // body: 'product found',
         body: JSON.stringify(product),
       }
     } catch (error) {
